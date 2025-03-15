@@ -315,13 +315,22 @@ nav a:hover {
 }
 
 /* Contact */
+.contact h1{
+    text-align: center;
+}
 .contact .contact-wrap {
-    height: 100%;
+    height: 95%;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-
+    justify-content: space-evenly;
+    hr{
+        transform: rotate(90deg);
+        width: 35%;
+        position: absolute;
+        background: var(--secondary-color);
+        opacity: 0.4;
+    }
     .left {
         height: 100%;
         width: 40%;
@@ -329,7 +338,7 @@ nav a:hover {
 
     .right {
         height: 90vh;
-        width: 40%;
+        width: 37%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -344,18 +353,38 @@ nav a:hover {
 
             input {
                 width: 100%;
-                height: 40px;
+                height: 45px;
                 border-radius: 15px;
                 background-color: rgba(0, 0, 0, 0.568);
+                font-size: 1.2rem;
+                border: none;
+                color: var(--secondary-color);
+                padding-left:20px ;
+            }
+            :focus{
+                outline: none;
+                border-bottom: 1.5px cyan solid;
+            }
+            ::placeholder{
+                padding-left:3px;
             }
 
             textarea {
                 width: 100%;
                 border-radius: 15px;
                 background-color: rgba(0, 0, 0, 0.568);
+                border: none;
+                resize: none;
+                font-size: 1.2rem;
+                color: var(--secondary-color);
+                padding-left:20px ;
+                
             }
-
+            textarea::placeholder{
+                padding-left: 3px;
+            }
             input[type='submit'] {
+                width: 100%;
                 border: none;
                 border-radius: 15px;
                 color: black;
@@ -363,6 +392,15 @@ nav a:hover {
                 background-color: var(--secondary-color);
                 font-weight: 800;
             }
+            input[type='submit']:hover{
+                transform: scale(1.01);
+                transition: all 0.2s ease-in-out;
+
+            }
+            input:hover,textarea:hover{
+                border-bottom: 1.5px cyan solid;
+            }
         }
+        
     }
 }
